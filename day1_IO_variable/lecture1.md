@@ -4,7 +4,7 @@
 - 프로그래밍? 프로그램을 만드는 것
 - 프로그램? 특정한 목적을 가진 일련의 순서, 과정
 - 컴퓨터프로그램? 컴퓨터가 수행하는, 특정한 목적을 가진 일련의 작업 순서, 과정
-- 특정한 목적??
+- 특정한 목적?? 
 - 컴퓨터? 계산기
 - 컴퓨터가 **잘**하는 작업? 정보(데이터)의 저장(표현) 및 연산(처리)
 * 컴퓨터 프로그래밍:
@@ -21,6 +21,7 @@
 3. 건축 디자인을 하고 나서 시공 단계. 재료의 특성 &rarr; 프로그래밍 언어의 차이
 4. 같은 한글을 쓰지만, 모두 다른 일을 한다 &rarr; 프로그래밍 언어로 할 수 있는 일, 만들 수 있는 프로그램의 다양성
 5. 같은 한글을 쓰지만, 작가가 될수도 있고 쓸데 없는 말을 할 수도 있다 &rarr; 내용의 중요성
+6. 같은 카카오톡. Android, iOS, 데스크탑 버전이 있는 것
 
 ---
 ## 1. Python Programming
@@ -35,19 +36,19 @@
 
 ### 순서대로 세팅
 1. Python 다운로드, 설치하기
-2. PATH 변수 설정: 경로를 적어둠으로써 이름만으로 찾아서 실행할 수 있도록 함
+2. `PATH` 변수 설정: 경로를 적어둠으로써 이름만으로 찾아서 실행할 수 있도록 함
 3. cmd로 실행해보기
     1. cmd 실행: <kbd>win</kbd> + <kbd>R</kbd> - `cmd` 입력
     2. 설치 확인: `python --version`
     3. **인터프리터 실행**
         1. `python3`
-        2. `1 + 2`, `2 * 5 / 10`, `Hi`, `"Hi"`, `"hello, world"`, `'this is string'`
+        2. 입력해보기: `1 + 2` , `2 * 5 / 10` , `Hi` , `"Hi"` , `"hello, world"` , `'this is string'`
     4. 위치 이동: `cd \` - `dir` - `mkdir workspace` - `cd workspace`
     5. **소스파일 실행**
-        1. `echo print("hello world") > test.py`: 
-        2. `cast test.py`
-        3. `python3 test.py` 
-4. vscode 설치
+        1. `echo print("hello world") > test.py`: 파일 만들기
+        2. `cat test.py`: 파일 내용 확인
+        3. `python3 test.py`: 인터프리터한테 읽고 실행시키도록
+4. vscode 다운로드, 설치하기
     1. 필요한 추가기능 설치: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd> or `[View]` - `[Extensions]`
         - python 설치
         - (선택) korean language pack 설치
