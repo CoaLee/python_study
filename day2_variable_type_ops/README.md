@@ -1,13 +1,26 @@
 # Lecture2. Variable, Primitive Data Types, Operators
 > 생각: 관통프로젝트처럼 한가지 프로그램을 정하고서 살을 붙여나가볼까? 전체 다는 못하더라도. 오늘 할것들만 합쳐서라도.
 
-## 0. 복습 (실행결과 예측 퀴즈)
-- 프로그래밍은 컴퓨터가 하는 일을 시키는 것이다
-- 컴퓨터는 데이터를 저장하고 연산하는 일을 잘한다
-- 왜 해야하는지 생각해보기 
-- `print()`
-- `input()`
-- `input()`과 `input("어떤 말")`의 차이
+## 0. 복습과 디버깅
+0. 프로그래밍 개념
+    - 프로그래밍은 컴퓨터가 하는 일을 시키는 것이다
+    - 컴퓨터는 데이터를 저장하고 연산하는 일을 잘한다
+    - 왜 해야하는지 생각해보기 
+
+1. 파이썬 프로그래밍
+    - 개발환경 세팅: Python(interpreter), VS code(text editor) 설치
+    - 인터프리터 실행
+    - 소스코드 실행 (<kbd>Ctrl</kbd>+<kbd>N</kbd> &rarr; <kbd>Ctrl</kbd>+<kbd>S</kbd> &rarr; 콘솔 실행(<kbd>Ctrl</kbd>+<kbd>\`</kbd> / `cmd`)
+
+2. 표준 입출력
+    - `print()`
+    - `input()`
+    - `input()`과 `input("어떤 말")`의 차이
+    - 표준 입출력에서 '표준'의 의미: 키보드와 모니터
+
+* 디버깅
+    - `cat`(linux) &rarr; `type`(windows)
+    - pylint 설치하기
 
 
 ## 1. 변수
@@ -53,11 +66,9 @@ print(한글도된다)
 numC = numA - numB
 print(numC)
 
-# 자기 자신도 마찬가지
+# 물론 자기 자신도 사용할 수 있음
 numC = numC * numC
 print(numC)
-
-
 ```
 ```python
 # hello_variable.py : 변수와 input, print 합쳐서 활용
@@ -97,30 +108,43 @@ print("살이군요. 건강하세요. 파이팅!")
 ### 코딩
 ```python
 # type_num.py
+# 수(정수, 실수) 자료형 연습
 
+# 수 데이터
 20190411
 3.1415926535897
 -273
 
+# 이름 붙이기 = 변수로 가리키기
 date_int = 20190411
 pi_float = 3.14
 absolute_zero_celcius = -273
 remaining_days = -273
+
+# 자료형 확인
+type(date_int)
+type(pi_float)
 ```
 ```python
 # type_str.py
+# 문자열 자료형 연습
 
+# 문자열 데이터
 '이것은 문자열'
 "이것도 문자열"
+type('이것은 문자열')
 
+# 이름 붙이기. 변수로 가리키기
 name = 'Yongjae'
+type(name)
 
-single_quote = 'Single quotation mark. "double quote" can be used'
+# 홑따옴표, 쌍따옴표
+single_quote = 'Single quotation mark. "double quote mark" can be used'
 print(single_quote)
-
 double_quote = "쌍따옴표 문자열. 문자열 안에 '작은 따옴표'"
 print(double_quote)
 
+# 여러줄
 multi_line_str = '''this is multi line str
 second line
 third line
@@ -129,49 +153,52 @@ print(multi_line_str)
 ```
 ```python
 # type_boolean.py
+# 논리 자료형 연습
 
 True
 False
 
+# 이름 붙이기. 변수로 가리키기
 true_var = True
 is_earth_bigger_than_sun = False
 am_I_graduated = True
 ```
 ```python
 # type_var_exercise.py
+# 자료형과 변수 같이 연습하기
 
 # 자신과 관련된 정보를 적어보자
-name = 'Yongjae'
-nickname = "머큰용"
+name = 'coalee'
+nickname = "머큰"
 
-age = 29
-birth_year = 1991
-birth_month = 6
-birth_date = 18
+age = 23
+birth_year = 1997
+birth_month = 4
+birth_date = 21
 
 major = '컴퓨터공학'
-hometown = '가평군 조종면'
-phone_number = '01095031381'
+hometown = '신하리'
 bucket_list1 = '수만명이 사용하는 서비스 개발'
 bucket_list2 = '돈 "많이" 벌어서 잘 사용하기'
 favorite_food = '김치 닭도리탕'
-# 기타 좋아하는 무언가 두개 적어보기 좋아하는 영화, 색, 계절, 숫자, 가수 등등
+# 더해서 좋아하는 무언가 두개 적어보기. ex) 좋아하는 영화, 색, 계절, 숫자, 가수 등등
+
 ```
 
 ---
-## 3. 연산
+## 3. 연산자
 #### Why and What?
-- Why? 
-- What? 
+- Why? 주어진 자료를 조작하고 싶다. 
+- What? 자료 &rarr; 연산 &rarr; 결과 &rarr; 저장 / 활용
 
 #### How?
-1. 수 연산: `+`, `-`, `*`, `/`, `%`, `//`
+1. 수 연산자: `+`, `-`, `*`, `/`, `%`, `//`, `**`
 
-2. 문자열 연산: `+`, `*`
+2. 문자열 연산자: `+`, `*`
 
-3. 관계 연산: `>`, `>=`, `<`, `<=`, `==`, `!=`, `is`
+3. 비교 연산자: `>`, `>=`, `<`, `<=`, `==`, `!=`, `is`
 
-4. 논리 연산: `and`, `or`, `not`, `&&`, `||`, `!`
+4. 논리 연산자: `and`, `or`, `not`, `&&`, `||`, `!`
 
 *  자료형 변환: `int('123')`, `str(545)`
 
@@ -179,17 +206,80 @@ favorite_food = '김치 닭도리탕'
 ### 코딩
 ```python
 # op_arithmetic.py
+# 수 연산자 연습
+
+# 값으로 바로 연산
+print(190 + 411)
+print(190 - 411)
+print(190 * 411)
+print(411 / 190)
+print(411 // 190)
+print(411 % 190)
+
+# 변수 활용 연산
+numA = 190
+numB = 411
+print(numA + numB)
+print(numA - numB)
+print(numA * numB)
+print(numB / numA)
+print(numB // numA)
+print(numB % numA)
+
+# 변수에 들어간 값 바꾸기
+numA = ' '
+numB = ' '
 
 ```
 ```python
 # op_string.py
+# 문자열 연산자 연습
 
-```
-```python
-# op_relation_and_logic.py
+# 값으로 바로 연산
+print("안녕하세요 저는" + '하랑' + "입니다")
+print('당신이 가장 좋아하는' + "음식" + "은 무엇인가요?")
+print("안녕" * 4)
+print("안녕\n" * 5)
+
+# 변수 활용 연산
+name = "하랑"
+category = "음식"
+msg = "잘가"
+
+print("안녕 내 이름은 " + name + "라고 해")
+print("제일 좋아하는 + category + "가 뭐니?")
+print(msg * 3)
+print(msg + "\n" * 3)
+print((msg + "\n") * 3)
+
+# 변수에 들어간 값 바꿔보기
 
 ```
 ```python
 # op_cast.py
+# 형 변환 연습
+
+year = 2019
+year_str = "2019"
+
+print(year)
+print(year_str)
+
+print(type(year))
+print(type(year_str))
+
+print(year + "년")    # error
+print(str(year) + "년") 
+
+print(year_str * 10)
+print(int(year_str) * 10)
+```
+```python
+# op_val_print_input.py
+# 지금까지 배운거 다 합쳐서 연습
+
+# 계산기 연습: 사칙연산 결과 나타내기
+
+# 상호작용 연습: 사용자 정보 입력 받고 
 
 ```
