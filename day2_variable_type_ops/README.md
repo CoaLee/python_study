@@ -1,6 +1,4 @@
 # Lecture2. Variable, Primitive Data Types, Operators
-> 생각: 관통프로젝트처럼 한가지 프로그램을 정하고서 살을 붙여나가볼까? 전체 다는 못하더라도. 오늘 할것들만 합쳐서라도.
-
 ## 0. 복습과 디버깅
 0. 프로그래밍 개념
     - 프로그래밍은 컴퓨터가 하는 일을 시키는 것이다
@@ -152,18 +150,6 @@ third line
 print(multi_line_str)
 ```
 ```python
-# type_boolean.py
-# 논리 자료형 연습
-
-True
-False
-
-# 이름 붙이기. 변수로 가리키기
-true_var = True
-is_earth_bigger_than_sun = False
-am_I_graduated = True
-```
-```python
 # type_var_exercise.py
 # 자료형과 변수 같이 연습하기
 
@@ -188,8 +174,10 @@ favorite_food = '김치 닭도리탕'
 ---
 ## 3. 연산자
 #### Why and What?
-- Why? 주어진 자료를 조작하고 싶다. 
-- What? 자료 &rarr; 연산 &rarr; 결과 &rarr; 저장 / 활용
+- Why? 주어진 자료를 조작하기. 계산을 통해 원하는 값을 얻기. 
+- What?
+    - 자료 &rarr; 연산 &rarr; 결과 &rarr; 저장 / 활용
+    - 연산 중 기본이 되는 연산자
 
 #### How?
 1. 수 연산자: `+`, `-`, `*`, `/`, `%`, `//`, `**`
@@ -247,7 +235,7 @@ category = "음식"
 msg = "잘가"
 
 print("안녕 내 이름은 " + name + "라고 해")
-print("제일 좋아하는 + category + "가 뭐니?")
+print("제일 좋아하는 " + category + "가 뭐니?")
 print(msg * 3)
 print(msg + "\n" * 3)
 print((msg + "\n") * 3)
@@ -274,12 +262,64 @@ print(str(year) + "년")
 print(year_str * 10)
 print(int(year_str) * 10)
 ```
+
+### 실습: 지금까지 배운 것으로 연습해보기
 ```python
-# op_val_print_input.py
-# 지금까지 배운거 다 합쳐서 연습
+# exercise2_calc.py
+# 계산기: 사칙연산 결과 나타내기
 
-# 계산기 연습: 사칙연산 결과 나타내기
+# 인트로 
+print("--- 하랑 계산기 ver 1.0 ---")
+print("두 정수를 입력하면 사칙연산 결과를 내보내겠소.")
 
-# 상호작용 연습: 사용자 정보 입력 받고 
+# 입력 받기
+strA = input("첫번째 수는 무엇이오: ")
+strB = input("두번째 수를 알려주시오: ")
+# 입력으로부터 정수로 변환하기. 매번 해도 되지만 이렇게 하는게 편할 것 같다.
+numA = int(strA)
+numB = int(strB)
 
+# 출력하기. 문자열 덧셈 연산과 정수 사칙연산 
+print(strA + " + " + strB + " = " + numA + numB)
+print(strA + " - " + strB + " = " + numA - numB)
+print(strA + " X " + strB + " = " + numA * numB)
+print(strA + " / " + strB + " = " + numA / numB)
+
+print("--- 계산 완료 ---")
+```
+```python
+# exercise2_hello.py
+# 인사 상호작용: 사용자 정보 입력 받고 맞춰서 출력하기
+
+# 인트로 
+print("--- 인사 맞이 프로그램 ---")
+print("안녕하세요 :)")
+print("당신에 대해서 알려주세요")
+
+# 기본 정보 입력 
+name = input("이름: ")
+hometown = input("고향: ")
+
+age = int(input("몇 살인가요? "))
+birth_year = int(input("태어난 연도를 알려주세요: "))
+birth_month = int(input("태어난 월과: "))
+birth_date = int(input("태어난 날짜도요: "))
+
+# 기본 정보 가지고 출력하기 
+print(hometown + "에서 태어난 " + name + "님 반갑습니다!")
+print("기본적인 정보를 입력 받았습니다. 추가 정보를 입력해주세요.")
+
+# 부가 정보 입력
+major = input("전공: ")
+bucket_list1 = input("버킷 리스트 첫번째: ")
+bucket_list2 = input("버킷 리스트 두번째: ")
+favorite_food = input("좋아하는 음식은? ")
+
+# 부가 정보 가지고 출력하기
+print(major + "전공을 가진 " + name + "님의 버킷리스트: ")
+print("1. " + bucket_list1)
+print("2. " + bucket_list2)
+
+# 인사
+print("버킷 리스트 꼭 달성하길! 안녕히 가세요 :)")
 ```
