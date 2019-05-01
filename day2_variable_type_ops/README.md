@@ -155,7 +155,7 @@ print(multi_line_str)
 
 # 자신과 관련된 정보를 적어보자
 name = 'coalee'
-nickname = "머큰"
+nickname = "요으재"
 
 age = 23
 birth_year = 1997
