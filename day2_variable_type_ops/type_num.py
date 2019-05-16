@@ -14,4 +14,4 @@ remaining_days = -273
 
 # 자료형 확인
 type(date_int)
-type(pi_float)
+print(type(pi_float))
