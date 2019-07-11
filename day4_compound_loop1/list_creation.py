@@ -27,6 +27,7 @@ print(mixed)
 print(listOfLists)
 
 # 변수 이름으로 list는 사용 가능하지만 피하도록 하자
+print()
 print(list)
 print(type(list))
 print(dir(list))

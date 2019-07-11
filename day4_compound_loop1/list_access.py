@@ -10,11 +10,13 @@ print(studyMembers[-1])
 print(studyMembers[4] == studyMembers[-3])
 
 # slicing
+print()
 print(studyMembers[2:4])
 print(studyMembers[:4])
 print(studyMembers[4:])
 print(studyMembers[1:-2])
 
 # slicing with step
+print()
 print(studyMembers[0:6:2])
-print(studyMembers[0:6:-1])
+print(studyMembers[::-1])

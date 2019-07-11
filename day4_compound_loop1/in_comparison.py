@@ -15,6 +15,6 @@ else:
         isPrime = True
 
     if isPrime is True:
-        print(inputNum + ": 소수입니다")
+        print(str(inputNum) + ": 소수입니다")
     else: 
-        print(inputNum + ": 소수가 아닙니다")
+        print(str(inputNum) + ": 소수가 아닙니다")

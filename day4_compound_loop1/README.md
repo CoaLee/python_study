@@ -188,12 +188,11 @@ print(greetMsgs * 5)
 #### `is`
 - 값이 같은지 비교하는 관계 연산자
 - `==`과의 차이: 값 비교 vs. 주소 비교
-- 변수: 봉투의 값 &rarr; 봉투의 주소를 저장
+- 변수: 값이 들어있는 봉투(세모) &rarr; 봉투의 주소를 저장(O)
 - `id(val)`: 주소값 확인
 
 #### `in`
 - 특정 자료값이 복합자료형(리스트, 튜플, 딕셔너리)에 속해 있는지 확인하는 관계 연산자
-
 
 ### 코딩
 ```python
@@ -221,7 +220,7 @@ print(id(e))
 
 print(d == e)   # False
 print(d is e)   # False
-print(del d[2])
+del d[2]
 print(d == e)   # True
 print(d is e)   # False
 ```

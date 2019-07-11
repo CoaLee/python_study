@@ -2,11 +2,12 @@
 
 # 리스트 생성
 studyMembers = ['JBK', 'LYR', 'YJW', 'CDJㅜ', 'JSY', 'YHR', 'LYJ']
+print(studyMembers)
 
 # 값 수정하기: indexing으로 접근
 studyMembers[3] = 'CDJ bye'
 studyMembers[-1] = 'Yong'
-studyMembers[9] = 'LKH'     # IndexError
+# studyMembers[9] = 'LKH'     # IndexError
 
 # 값 추가하기: append, insert, extend
 studyMembers.append('LKH')          # append: 뒤에 원소 붙이기
