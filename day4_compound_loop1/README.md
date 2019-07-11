@@ -184,29 +184,46 @@ greetMsgs = ['Hello', '안녕']
 print(greetMsgs * 5)
 ```
 
-## 2. is, in 비교연산
----
-## Exercise
+## 2. `is`, `in` 관계 연산자
+#### `is`
+- 값이 같은지 비교하는 관계 연산자
+- `==`과의 차이: 값 비교 vs. 주소 비교
+- 변수: 봉투의 값 &rarr; 봉투의 주소를 저장
+- `id(val)`: 주소값 확인
+
+#### `in`
+- 특정 자료값이 복합자료형(리스트, 튜플, 딕셔너리)에 속해 있는지 확인하는 관계 연산자
+
+
+### 코딩
 ```python
 # is_comparison.py
 
-a = b = [1,2,3]
+a = [1,2,3]
+b = a
 c = [1,2,3]
 
-print(a == b)
-print(a == c)
+print(id(a))
+print(id(b))
+print(id(c))
 
-print(a is b)
-print(a is c)
+print(a == b)   # True
+print(a == c)   # True 
 
-a = [1,2,3]
-b = [1,2]
+print(a is b)   # True
+print(a is c)   # False
 
-print(a == b)
-print(a is b)
-print(del a[2])
-print(a == b)
-print(a is b)
+d = [1,2,3]
+e = [1,2]
+
+print(id(d))
+print(id(e))
+
+print(d == e)   # False
+print(d is e)   # False
+print(del d[2])
+print(d == e)   # True
+print(d is e)   # False
 ```
 ```python
 # in_comparison.py
@@ -230,6 +247,8 @@ else:
     else: 
         print(inputNum + ": 소수가 아닙니다")
 ```
+---
+## Exercise
 ```python
 # list_repetition.py
 
