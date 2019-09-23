@@ -1,4 +1,4 @@
-# Lecture4. Compound Data Types, Loop Statement
+# Lecture5. While Loop
 ## 0. 복습
 0. 프로그래밍 개념
     - 프로그래밍은 컴퓨터가 하는 일을 시키는 것이다
@@ -290,6 +290,7 @@ while i <= numB:
 print("합은: " + str(sum_num))
 
 # 4) 입력수A가 입력수B보다 크다면?
+
 ```
 ```python
 # times_table.py
