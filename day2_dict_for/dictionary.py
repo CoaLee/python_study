@@ -23,24 +23,11 @@
 '''
 
 # 1. 딕셔너리 생성, 값 접근
-my_phone = { 'brand': 'Samsung', 'model': 'Note9' }
-print(type(my_phone))
-print(my_phone)
-print(my_phone['brand'])
+## 빈 딕셔너리
+empty_dict = {}
+## 자신의 핸드폰 정보를 담은 딕셔너리를 만들어보자
+my_phone = {}
+
 
 
 # 2. 추가, 수정, 삭제
-my_phone['OS'] = 'Android'
-my_phone['price'] = 200000
-print('price: {}'.format(my_phone['price']))
-my_phone['price'] = 250000
-print(f'price: {my_phone["price"]}')
-my_phone['price'] *= 1.10
-print(my_phone)
-
-del my_phone['OS']
-print(my_phone)
-my_phone.pop('price')
-
-## 근데 실제로는 삭제를 많이 쓰지는 않는 것 같다.
-## 나중에 배우게 될 클래스의 개념과 비슷한 면이 있다.

@@ -25,37 +25,14 @@ Q. while문은 어떻게 쓰더라? while문과의 차이점은?
 studyMembers = ['JBK', 'LYR', 'YJW', 'CDJㅜ', 'JSY', 'YHR', 'LYJ']
 
 ## 1) 반복해서 리스트 출력 + 첫번째 문자열 interpolation (보간?)
-i = 0
-while i < 7:
-    print(f'{i}번째 스터디 멤버: {studyMembers[i]}. 파이팅!')
-    i += 1
-
 ## 2) 사람 찾기 + 두번째 string interpolation 
-search = input("찾으려는 사람 이니셜: ")
-i = 0
-while i < len(studyMembers):
-    if studyMembers[i] == search:
-        print('{}는 {}번째 스터디 멤버. 파이팅!'.format(search, i + 1))
-    i += 1
 
 
-# 1. for 문 활용하기: 리스트 자료 접근하기. 위의 걸 바꿔보자
-for member in studyMembers:
-    print('스터디 멤버: {}'.format(member))
 
-search = input("찾으려는 사람 이니셜: ")
-for member in studyMembers:
-    if search == member:
-        print('{}는 스터디 멤버입니다'.format(search))
+# 1. for 문 활용하기: 리스트 자료 접근하기. 위 while문을 바꿔보면
 
-if search in studyMembers:
-    print('찾았다!')
-else:
-    print('없다!')
+## enumerate 활용
 
-## enumerate
-for i, member in enumerate(studyMembers):
-    print(f'{i+1}번째 스터디 멤버: {studyMembers[i]}. 파이팅!')
 
 
 # 2. for 문 활용하기: 일정하게 변하는 수
@@ -66,37 +43,12 @@ for i in numbers:
 # range(b):         0 <= n < b, 간격 1
 # range(a, b):      a <= n < b, 간격 1
 # range(a, b, c):   a <= n < b, 간격 c
-for i in range(9):
-    print(i)
-
-for i in range(-2, 13):
-    print(i)
-
-for i in range(-2, 3):
-    print(i)
-
-for i in range(1, 10, 2):
-    print(i)
-
-for i in range(10, 0):
-    print(i)
 
 # range(a, b, c):   a >= n > b, 간격 c    if (c < 0)
-for i in range(10, 0, -1):
-    print(i)
 
 
-# 3. for 문 활용하기: 딕셔너리 접근하기
+
+# 3. for 문 활용하기: 딕셔너리 자료 접근하기
 ## dict.keys(), dict.values(), dict.items()
 capitals = {'한국': '서울', '캐나다':'오타와', '호주':'캔버라'}
-for country in capitals.keys():
-    print(country)
 
-for country in capitals.keys():
-    print(capitals[country])
-
-for capital in capitals.values():
-    print(capital)
-
-for country, capital in capitals.items():
-    print('{}의 수도는 {}입니다.'.format(country, capital))
