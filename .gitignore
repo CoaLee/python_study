@@ -1,2 +1,4 @@
 .vscode/
 .*.swp
+*.spec
+__pycache__
